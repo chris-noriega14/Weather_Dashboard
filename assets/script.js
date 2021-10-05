@@ -1,15 +1,14 @@
+//Declaring all of the variables needed for the webpage to function
 var userFormEl = $("#user-form");
 var cityInputEl = $("#cityname");
 var cityButtonsEl = $("#city-buttons");
 var citySearchTerm = $("#city-search-term");
 var cityContainerEl = $("#city-container");
-var temperature = $("#temp1");
-var wind = $(".wind");
-var humidity = $(".humidity");
+var temperature = $("#todayTemp");
+var wind = $("#todayWind");
+var humidity = $("#todayHumidity");
 
-// var weatherinfo = document.querySelector()
-// var forecast = document.querySelector
-
+//Set up the Submit Form Button functionality
 function formSubmitHandler (event) {
     event.preventDefault();
 
@@ -26,7 +25,7 @@ function formSubmitHandler (event) {
     }
 };
 
-//Breakpoint
+//Set up a function to read the user input info from the form that the user submitted
 function getUserCityInfo (city) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3eeec961c8a063dea77acf5a3a9e692f";
     
@@ -47,6 +46,7 @@ function getUserCityInfo (city) {
       });
 };
 
+//Set up a function to create the event of the user clicking a popular city button
 function  buttonClickHandler (event) {
     var city = event.target.getAttribute('data-city');
 
@@ -57,8 +57,7 @@ function  buttonClickHandler (event) {
     }
 };
 
-//Breakpoint
-
+//Set up a function to return API city weather information based off of button click city selection
 function getFeaturedCityInfo (city) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3eeec961c8a063dea77acf5a3a9e692f";
 
@@ -96,6 +95,6 @@ function displayInfo (temp, wind, humidity, UVindex, searchTerm) {
     }
 }
 
+//This calls an event for the two input methods the user can apply (form, button)
 cityInputEl.on('click',formSubmitHandler);
 cityButtonsEl.on('click',buttonClickHandler);
-// fetch (api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key})
