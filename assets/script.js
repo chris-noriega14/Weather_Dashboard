@@ -7,6 +7,7 @@ var cityContainerEl = $("#city-container");
 var temperature = $("#todayTemp");
 var wind = $("#todayWind");
 var humidity = $("#todayHumidity");
+var UVindex = $("#todayUVIndex");
 
 //Set up the Submit Form Button functionality
 function formSubmitHandler (event) {
