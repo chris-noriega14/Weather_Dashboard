@@ -73,12 +73,21 @@ function getFeaturedCityInfo (city) {
         console.log("Wind:" + data.wind.speed);
         console.log("Humidity:" + data.main.humidity);
         console.log("Icon:" + data.weather[0].icon);
-        
-        function getTemp(data) {
-            const TempEl = data.main.temp(city);
-            TempEl.textContent("Temp:" + data.main.temp);
-            console.log(TempEl);
-        }
+
+        var weathericon=data.weather[0].icon;
+        var iconURL="https://openweathermap.org/img/wn/"+ weathericon +"@2x.png";
+        var date=new Date(data.dt*1000).toLocaleDateString();
+        $("#city-search-term").html(data.name +"("+date+")" + "<img src="+iconURL+">");
+
+        var tempF = (data.main.temp - 273.15) * (9/5) + 32;
+        $(temperature).html((tempF).toFixed(2)+"&#8457");
+        // Display the Humidity
+        $(humidity).html(data.main.humidity+"%");
+        //Display Wind speed and convert to MPH
+        var ws=data.wind.speed;
+        //Convert meters per second to miles per hour
+        var windsmph=(ws*2.237).toFixed(1);
+        $(wind).html(windsmph+"MPH");
       }); 
     } else {
         alert('Error: ' + response.statusText);
