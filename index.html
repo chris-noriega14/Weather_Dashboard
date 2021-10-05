@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="min-100-vh flex-column">
+
+    <div class="header w-100 pt-1 pb-2">
+        <h1 class="title w-20 text-center text-white">Weather Dashboard</h1>
+    </div>
+
+    <main>
+        <div class="col-12 col-md-3">
+            <div class="card">
+                <h3 class="card-header city-search">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                    <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input mb-3" />
+                    <button type="submit" class="btn font-weight-bold mb-3">Search</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3 class="card-header city-search">Popular Searches</h3>
+                <div id="city-buttons" class="card-body">
+                    <button data-city="Austin" class="btn">Austin</button>
+                    <button data-city="Chicago" class="btn">Chicago</button>
+                    <button data-city="New York" class="btn">New York</button>
+                    <button data-city="Orlando" class="btn">Orlando</button>
+                    <button data-city="San Francisco" class="btn">San Francisco</button>
+                    <button data-city="Seattle" class="btn">Seattle</button>
+                    <button data-city="Denver" class="btn">Denver</button>
+                    <button data-city="Atlanta" class="btn">Atlanta</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="weatherinfo col-12 col-md-9">
+            <div class="results">
+                <h2 class="results-header"><span id="city-search-term">Austin</span></h2>
+                <div id="city-container" class="list-group"></div>
+                <div class="temp pt-2 pb-2">Temp:<span id="temp1"></span></div>
+                <div class="wind pb-2">Wind:</div>
+                <div class="humidity pb-2">Humidity:</div>
+                <div class="UVindex pb-1.5">UV Index:</div>
+            </div>
+            <div class="forecast-title">5-Day Forecast</div>
+            <div class="forecast">
+                <div class="forecast-header">Day 1
+                    <div class="temp">Temp:</div>
+                    <div class="wind">Wind:</div>
+                    <div class="humidity">Humidity:</div>
+                </div>
+                <div class="forecast-header">Day 2
+                    <div class="temp">Temp:</div>
+                    <div class="wind">Wind:</div>
+                    <div class="humidity">Humidity:</div>
+                </div>
+                <div class="forecast-header">Day 3
+                    <div class="temp">Temp:</div>
+                    <div class="wind">Wind:</div>
+                    <div class="humidity">Humidity:</div>
+                </div>
+                <div class="forecast-header">Day 4
+                    <div class="temp">Temp:</div>
+                    <div class="wind">Wind:</div>
+                    <div class="humidity">Humidity:</div>
+                </div>
+                <div class="forecast-header">Day 5
+                    <div class="temp">Temp:</div>
+                    <div class="wind">Wind:</div>
+                    <div class="humidity">Humidity:</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- padding is the space between the container and it's content -->
+    <!-- margin moves the container side position from its current position -->
+    <!-- Bootstrap portion: Section 5: Activities#11-#18 -->
+    <!-- Javascript portion: Section 6: Activities#21 -->
+    <!-- Check if this jQuery version works -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

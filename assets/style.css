@@ -1,0 +1,60 @@
+.header {
+    background-image: linear-gradient(to right,#2573C5,#370D32);
+}
+
+#cityname {
+    margin-top: -40px;
+}
+
+.btn {
+    background-color:#66a3ff;
+    color:#d5d5dd;
+    display: block;
+    margin-bottom: 15px;
+}
+
+[data-city] {
+    background-color:#b3b3b3;
+    font-weight: 500;
+    color:black;
+    margin:4px;
+}
+
+#city-buttons {
+    border-top: solid;
+    border-top-color:#595959;
+    border-top-width: 3px;
+}
+
+.weatherinfo {
+    display:table;
+    position: relative;
+    top: 10%;
+    left: 24%;
+}
+
+.results {
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 0px 20px 10px;
+    font-weight: bold;
+}
+
+.forecast-title {
+    font-size:25px;
+    font-weight:bolder;
+    border-style: solid;
+}
+
+.forecast {
+    border-style: solid;
+}
+
+.forecast-header {
+    border-style: solid;
+    width: 19.5%;
+    display: inline-block;
+    background-color: #264d73;
+    color:whitesmoke;
+    padding:2px;
+}
