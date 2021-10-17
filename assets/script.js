@@ -135,6 +135,8 @@ function getForecast(lat,lon) {
             var temp = $("<p>").text(data.daily[i].temp.day);
             var windSpeed = $("<p>").text(data.daily[i].windspeed);
             var humidity = $("<p>").text(data.daily[i].humidity);
+            //Add UV Index of daily weather
+            $("#todayUVIndex").text(data.daily[0].uvi);
             //5-Day Forecast Date
             $("#F1date").text(date1);
             $("#F2date").text(date2);
