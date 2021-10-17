@@ -29,5 +29,5 @@ Additionally, the 5-day forecast is populated with the following elements:
 In order to achieve this, the webpage has to fetch the open weather app API and retrieve the following elements: Temperature: data.main.temp, Wind Speed: data.wind.speed, Humidity:data.main.humidity, Weather icon:
 data.weather[0].icon.
 
-GIF of deployed application: ![]https://github.com/chris-noriega14/Weather_Dashboard/blob/main/screencapture-weather-dashboard.gif?raw=true
+GIF of deployed application: https://github.com/chris-noriega14/Weather_Dashboard/blob/main/screencapture-weather-dashboard.gif
 
